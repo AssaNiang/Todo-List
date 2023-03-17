@@ -29,6 +29,7 @@ h1,p,h2{
     gap:10px;
 }
 .width{
-    width:390px;
+    /* width:390px; */
+    width:50vW;
     margin:auto;
 }

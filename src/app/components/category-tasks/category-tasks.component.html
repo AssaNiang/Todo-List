@@ -1,9 +1,10 @@
-<p>Sélectionner votre catégorie :</p>
-<div *ngFor="let category of categories" >
-
-<input type="radio" id="{{category}}" value="{{category}}" name="category" (click)="changeCategory()" >
-
-<label  for="{{category}}">{{category}}</label>
-
-</div>
+<form>
+    <p>Sélectionner votre catégorie :</p>
+    <div class="category">
+        <div   *ngFor="let category of categories" >
+            <input type="radio" id="{{category}}" value="{{category}}" name="category" (click)="changeCategory()" >
+            <label  for="{{category}}">{{category}}</label>
+        </div>
+    </div>
+</form>
 
