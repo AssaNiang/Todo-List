@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
 import { HistoryComponent } from './pages/history/history.component';
+import { CategoryTasksComponent } from './components/category-tasks/category-tasks.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HistoryComponent } from './pages/history/history.component';
     FooterComponent,
     HomeComponent,
     NewTaskComponent,
-    HistoryComponent
+    HistoryComponent,
+    CategoryTasksComponent
   ],
   imports: [
     BrowserModule,
