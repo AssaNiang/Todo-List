@@ -6,6 +6,7 @@
     --color-yellow:#F3D24F;
     --color-pink:#E475F1;
     --color-blue:#64A7D9;
+    --color-gray-black:#1D2038;
 }
 *{
     margin:0;
@@ -15,7 +16,7 @@
 }
 body{
     background-color: var(--color-bg);
-    font-size: var(--color-white);
+    color: var(--color-white);
 }
 h1,p,h2{
     font-family: 'Quicksand', sans-serif;
