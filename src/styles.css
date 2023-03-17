@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --color-bg:#040722;
+    --color-white:#FFFFFF;
+    --color-green:#88E7A1;
+    --color-yellow:#F3D24F;
+    --color-pink:#E475F1;
+    --color-blue:#64A7D9;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    background-color: var(--color-bg);
+    font-size: var(--color-white);
+}
+h1,p,h2{
+    font-family: 'Quicksand', sans-serif;
+}
+.flex{
+    display:flex;  
+}
+.column{
+    flex-direction: column;
+    gap:10px;
+}
+.width{
+    width:390px;
+    margin:auto;
+}
