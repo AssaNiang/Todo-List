@@ -1,1 +1,12 @@
-<p>description-task works!</p>
+<div>
+    <label for="content">Quelle tâche avez-vous à effectuer ?</label>
+    <textarea id="story" name="story"
+    rows="5" cols="33" placeholder="Exemple: Faire les courses" required #task>
+    It was a dark and stormy night... 
+    </textarea>
+    <!-- <input type="text" #task> -->
+    <button (click)="addtask(task.value)"> Ajouer une nouvelle tache</button>
+    <ul *ngFor="let item of list">
+        <li>{{item.content}} <button (click)="removeTask(item.id)">remove</button></li>
+    </ul>
+</div>
