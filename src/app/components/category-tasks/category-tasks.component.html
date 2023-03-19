@@ -1,10 +1,9 @@
-<form>
+<div class="container">
     <p>Sélectionner votre catégorie :</p>
     <div class="category">
-        <div   *ngFor="let category of categories" >
-            <input type="radio" id="{{category}}" value="{{category}}" name="category" (click)="changeCategory()" >
-            <label  for="{{category}}">{{category}}</label>
+        <div    *ngFor="let category of categories" >
+            <input type="radio" id="{{category.id}}" value="{{category.title}}" class="input-radio" name="category" (click)="chooseCategory(category.title)">
+            <label  for="{{category.id}}"><img src="{{category.img}}"></label>
         </div>
     </div>
-</form>
-
+</div>

@@ -1,5 +1,10 @@
 h1{
     border-bottom: var(--color-white) 1px solid;
-    padding:3px;
+    padding:20px;
     font-size: 20px;
+}
+.width{
+    /* width:390px; */
+    width:50vW;
+    margin:auto;
 }

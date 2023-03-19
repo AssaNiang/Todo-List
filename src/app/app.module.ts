@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { CategoryTasksComponent } from './components/category-tasks/category-tasks.component';
+import { DescriptionTaskComponent } from './components/description-task/description-task.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CategoryTasksComponent } from './components/category-tasks/category-tas
     HomeComponent,
     NewTaskComponent,
     HistoryComponent,
-    CategoryTasksComponent
+    CategoryTasksComponent,
+    DescriptionTaskComponent
   ],
   imports: [
     BrowserModule,

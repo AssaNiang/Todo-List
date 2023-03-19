@@ -5,5 +5,5 @@
     content: string;
     category: CategoryType;
     isUrgent: boolean;
-    doneDate: Date;
+    doneDate: Date | null;
 }
