@@ -10,7 +10,7 @@ import { NewTaskComponent } from './pages/new-task/new-task.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { CategoryTasksComponent } from './components/category-tasks/category-tasks.component';
 import { DescriptionTaskComponent } from './components/description-task/description-task.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { DescriptionTaskComponent } from './components/description-task/descript
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
