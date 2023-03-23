@@ -30,7 +30,7 @@ export class NewTaskComponent implements OnInit{
       this.loginForm = this.fb.group({
         category:[null, Validators.required],
         content:[null, Validators.required],
-        isUrgent:[null],
+        isUrgent:[false],
       });
       this.createNewTask();
     
@@ -75,7 +75,8 @@ this.taskservice.addTask(this.currentTask);
     console.log("le contenu:", this.currentTask.content);
   }
   changeIsUrgent(){
-    this.currentTask.isUrgent=this.loginForm.get('isUrgent')?.value;
+    
+    this.currentTask.isUrgent=this.loginForm.get('isUrgent')!.value;
     console.log("le isurgent:", this.currentTask.isUrgent);
 
   }

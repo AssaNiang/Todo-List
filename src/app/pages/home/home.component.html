@@ -1,4 +1,21 @@
-<main>
-    <p>home works!</p>
-</main>
+<h1>Home</h1>
+<!-- <section>
+    <h2>Toutes les taches</h2>
+    <p *ngFor="let task of getAllTask()">{{task.category}}-{{task.content}}</p>
+</section> -->
+<section>
+    <h2>les taches urgentes</h2>
+    <div *ngFor="let task of getUrgentTask(true)">
+   
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">{{task.category}}-{{task.content}}</label>
 
+</div>
+</section>
+<section>
+    <h2>les taches non urgentes</h2>
+    <div *ngFor="let task of getUrgentTask(false)">
+        
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">{{task.category}}-{{task.content}}</label></div>
+</section>
