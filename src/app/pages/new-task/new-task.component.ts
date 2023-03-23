@@ -19,7 +19,7 @@ export class NewTaskComponent implements OnInit{
 
   loginForm!:FormGroup;
   currentTask!: ITask;
-  
+
   constructor(private fb:FormBuilder,
     private taskservice:TasksService){
 
@@ -28,8 +28,8 @@ export class NewTaskComponent implements OnInit{
   ngOnInit(): void {
     
       this.loginForm = this.fb.group({
-        category:[null],
-        content:[null],
+        category:[null, Validators.required],
+        content:[null, Validators.required],
         isUrgent:[null],
       });
       this.createNewTask();
