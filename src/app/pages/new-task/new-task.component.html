@@ -28,7 +28,7 @@
         <label for="urgent">La tâche est urgente ⚠️</label>
     </div>
     
-    <button type="submit">Valider ma tâche </button>
+    <button type="submit" [disabled]="!loginForm.valid">Valider ma tâche </button>
 </form>
 <pre>
 {{loginForm.value |json}}
