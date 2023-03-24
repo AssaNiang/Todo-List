@@ -5,9 +5,9 @@
         <div class="category">
             <div    *ngFor="let category of categories" >
                 <input type="radio" id="{{category.id}}" value="{{category.title}}" class="input-radio" name="category" formControlName="category" >
-                <label  for="{{category.id}}"><img src="{{category.img}}"></label>
-                <!-- corection corect -->
-                <!-- <label  for="{{category.id}}">{{category.img}}</label> -->
+                <!-- <label  for="{{category.id}}"><img src="{{category.img}}"></label> -->
+
+                <label  for="{{category.id}}">{{category.img}}</label>
             </div>
         </div>
     <!-- </div> -->

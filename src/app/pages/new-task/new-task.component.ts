@@ -92,31 +92,30 @@ this.taskservice.addTask(this.currentTask);
     {
 
       id:1,
-      title:"shopping",
-      img:"assets/img/shopping.png"
-      // img:"🛍️"
+      title:"🛍️",
+     img:"🛍️"
     },
     { 
       id:2,
-      title:"health",
-      img:"assets/img/health.png"},
+      title:"💊",
+      img:"💊"},
       
     {
       id:3,
-      title:"work",
-      img:"assets/img/work.png"},
+      title:"💼",
+      img:"💼"},
   
       {id:4,
-      title:"bills",
-      img:"assets/img/bills.png"},
+      title:"🧾",
+      img:"🧾"},
   
       {id:5,
-        title:"cleaning",
-        img:"assets/img/cleaning.png"},
+        title:"🧽",
+        img:"🧽"},
   
       {id:6,
-          title:"other",
-          img:"assets/img/other.png"
+          title:"🤷‍♀️",
+          img:"🤷‍♀️"
       },
    ];
 }
