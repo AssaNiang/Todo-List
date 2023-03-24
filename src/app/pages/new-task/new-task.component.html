@@ -1,34 +1,31 @@
-<!-- <main> -->
-    <!-- <form> -->
-        <!-- <app-category-tasks></app-category-tasks>
-            <app-description-task></app-description-task> -->
-            <!-- </form> -->
-            
-            <!-- </main> -->
 <main>
 <form [formGroup]="loginForm" (ngSubmit)="validated()">
-    <div class="container">
-        <p>Sélectionner votre catégorie :</p>
+    <p class="title-category">Sélectionner votre catégorie :</p>
+    <!-- <div class="container"> -->
         <div class="category">
             <div    *ngFor="let category of categories" >
                 <input type="radio" id="{{category.id}}" value="{{category.title}}" class="input-radio" name="category" formControlName="category" >
                 <label  for="{{category.id}}"><img src="{{category.img}}"></label>
+                <!-- corection corect -->
+                <!-- <label  for="{{category.id}}">{{category.img}}</label> -->
             </div>
         </div>
-    </div>
-    <div class="container">
-    <label for="content">Quelle tâche avez-vous à effectuer ?</label>
-    <textarea id="content" formControlName="content" 
-    rows="5" cols="33" placeholder="Exemple: Faire les courses" required >
+    <!-- </div> -->
+    <!-- <div class="container-textarea"> -->
+    <p for="content" id="task">Quelle tâche avez-vous à effectuer ?</p>
+    <textarea id="content" formControlName="content" class="textarea"
+     placeholder="Exemple: Faire les courses" required >
     It was a dark and stormy night... 
     </textarea>
-    </div>
+    <!-- </div> -->
     <div class="checkbox">
-        <input type="checkbox" for="urgent" formControlName="isUrgent" >
-        <label for="urgent">La tâche est urgente ⚠️</label>
+        <label>
+            <input type="checkbox"  class="isurgent" formControlName="isUrgent" >La tâche est urgente ⚠️ 
+            <span></span>
+        </label>
     </div>
     
-    <button type="submit" [disabled]="!loginForm.valid">Valider ma tâche </button>
+    <button type="submit" class="button-valid" [disabled]="!loginForm.valid">Valider ma tâche </button>
 </form>
 <pre>
 {{loginForm.value |json}}

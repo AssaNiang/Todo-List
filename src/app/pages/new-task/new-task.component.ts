@@ -93,7 +93,9 @@ this.taskservice.addTask(this.currentTask);
 
       id:1,
       title:"shopping",
-      img:"assets/img/shopping.png"},
+      img:"assets/img/shopping.png"
+      // img:"🛍️"
+    },
     { 
       id:2,
       title:"health",

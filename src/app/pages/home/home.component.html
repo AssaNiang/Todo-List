@@ -1,8 +1,8 @@
-<h1>Home</h1>
+
 <!-- <section>
     <h2>Toutes les taches</h2>
     <p *ngFor="let task of getAllTask()">{{task.category}}-{{task.content}}</p>
-</section> -->
+</section> --> 
 <!-- <section>
     <h2>les taches urgentes</h2>
     <div *ngFor="let task of getUrgentTask(true)">
@@ -18,32 +18,33 @@
         
         <input type="checkbox" id="checkbox">
         <label for="checkbox">{{task.category}}-{{task.content}}</label></div>
-    </section> -->
+    </section>
     
-    <section *ngIf="!taskList.length; else emptytaskList">
-        
-        
-        <!-- taches urgentes -->
-        <p *ngIf="this.getUrgentTask">⚠️ Tâche urgentes </p>
-        
-        <ng-container *ngFor="let task of taskUrgent">
-            <div>
-            <input type="checkbox" id="checkbox">
-            <label for="checkbox">{{task.category}}-{{task.content}}</label>
-        </div>
-        </ng-container>
-        
-        <!-- taches non urgentes -->
-        <p *ngIf="this.taskNoUrgent">🌸 Autres les tâches </p>
-        
-        <div *ngFor="let task of taskNoUrgent">
+    <! validation -->
+    <main>
+        <section *ngIf="!taskList.length; else emptytaskList">
             
-            <input type="checkbox" id="checkbox">
-            <label for="checkbox">{{task.category}}-{{task.content}}</label></div>
-        </section>
-        <ng-template #emptytaskList>
-            <p>Aucune tâche pour le moment 🙌</p>
-            <a routerLink="/new-task">Créer une tâche</a>
+            <!-- taches urgentes -->
+            <p *ngIf="this.getUrgentTask">⚠️ Tâche urgentes </p>
             
-        </ng-template>
-        
+            <!-- <ng-container > -->
+                <div *ngFor="let task of taskUrgent">
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">{{task.category}}-{{task.content}}</label>
+                </div>
+                <!-- </ng-container> -->
+                
+                <!-- taches non urgentes -->
+                <p *ngIf="this.taskNoUrgent">🌸 Autres les tâches </p>
+                
+                <div *ngFor="let task of taskNoUrgent"> 
+                    
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">{{task.category}}-{{task.content}}</label></div>
+                </section>
+                <ng-template #emptytaskList>
+                    <p>Aucune tâche pour le moment 🙌</p>
+                    <a routerLink="/new-task">Créer une tâche</a>
+                    
+                </ng-template>
+            </main>
