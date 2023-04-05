@@ -68,7 +68,7 @@ this.taskservice.addTask(this.currentTask);
   // j'affecte la valeure que j'ai cliqué dans la categorie à la categorie de ma tache fictive dans le service 
   changeCategory(){
     this.currentTask.category=this.loginForm.get("category")!.value;
-    console.log( "le category:",this.currentTask.category);
+    console.log( "la category:",this.currentTask.category);
   }
   changeContent(){
     this.currentTask.content=this.loginForm.get("content")?.value;

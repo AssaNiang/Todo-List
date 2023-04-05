@@ -1,23 +1,20 @@
-<main>
+
 <form [formGroup]="loginForm" (ngSubmit)="validated()">
     <p class="title-category">Sélectionner votre catégorie :</p>
-    <!-- <div class="container"> -->
+    
         <div class="category">
             <div    *ngFor="let category of categories" >
                 <input type="radio" id="{{category.id}}" value="{{category.title}}" class="input-radio" name="category" formControlName="category" >
-                <!-- <label  for="{{category.id}}"><img src="{{category.img}}"></label> -->
-
                 <label  for="{{category.id}}">{{category.img}}</label>
             </div>
         </div>
-    <!-- </div> -->
-    <!-- <div class="container-textarea"> -->
-    <p for="content" id="task">Quelle tâche avez-vous à effectuer ?</p>
+
+    <p for="content" id="task" class="task">Quelle tâche avez-vous à effectuer ?</p>
     <textarea id="content" formControlName="content" class="textarea"
      placeholder="Exemple: Faire les courses" required >
     It was a dark and stormy night... 
     </textarea>
-    <!-- </div> -->
+    
     <div class="checkbox">
         <label>
             <input type="checkbox"  class="isurgent" formControlName="isUrgent" >La tâche est urgente ⚠️ 
@@ -27,7 +24,4 @@
     
     <button type="submit" class="button-valid" [disabled]="!loginForm.valid">Valider ma tâche </button>
 </form>
-<pre>
-{{loginForm.value |json}}
-</pre>
-</main>
+

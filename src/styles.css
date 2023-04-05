@@ -14,12 +14,21 @@
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
 }
-body{
-    background-color: var(--color-bg);
-    color: var(--color-white);
+
+app-root{
+    background-color:var(--color-bg);
+    color:var(--color-white);
+    width:390px;
+    /* margin:auto; */
     height:100vh;
     max-height:100vh;
-}
+    display: flex;
+    flex-direction: column;
+  }
+/* body{
+    width:390px;
+} */
+
 h1,p,h2{
     font-family: 'Quicksand', sans-serif;
 }
@@ -31,7 +40,19 @@ h1,p,h2{
     gap:10px;
 }
 .width{
-    /* width:390px; */
-    width:50vW;
+    width:390px;
+    /* width:50vW; */
     margin:auto;
+}
+main{
+    flex:1;
+    overflow-y: scroll;
+}
+header{
+    height:70px;
+}
+footer{
+    height:100px;
+    width:100%;
+    border-top: var(--color-white) 1px solid;
 }

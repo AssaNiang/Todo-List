@@ -1,7 +1,21 @@
-<footer>
+<!-- <footer>
     <nav>
         <a  class="home" routerLink="/"><img src="assets/img/trait.png" ></a>
         <a  class="new-task" routerLink="/new-task"><img src="assets/img/plus.png" ></a>
         <a class= "history" routerLink="/history"> <img src="assets/img/horloge.png" ></a>
     </nav>
-</footer>
+</footer> -->
+<nav>
+    <a [routerLink]="'/home'" routerLinkActive="home-link">
+        <img src="assets/img/trait.png">
+
+    </a>
+    <a [routerLink]="'/new-task'" routerLinkActive="newtask-link">
+        <img src="assets/img/plus.png" >
+    </a>
+    <a [routerLink]="'/history'" routerLinkActive="history-link">
+        <img src="assets/img/horloge.png" >
+
+    </a>
+
+</nav>

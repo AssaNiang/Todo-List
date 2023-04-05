@@ -5,7 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
 const routes: Routes = [
   {
-    path:"",
+    path:"home",
     component:HomeComponent
     
   },

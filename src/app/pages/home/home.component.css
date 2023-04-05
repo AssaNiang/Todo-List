@@ -1,5 +1,38 @@
-main{
-    height:70vh;
-    max-height:80vh;
+section{
+    margin-left:26px;
    
+}
+p{ 
+    margin-top:27px;
+    margin-left:26px;
+    margin-bottom: 38px;
+}
+div{
+    display: flex;
+    padding:23px;
+}
+/* je retire le carré blanc de la checkbox */
+input[type="checkbox"] {
+    opacity: 0;
+
+}
+/* il contient mon input et le bouton ou je vais cliquer mon span */
+.checkbox label {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.checkbox span {
+    background-color: var(--color-gray-black);
+    margin-right: 0.4rem;
+    border-radius: 50%;
+    border: 2px var(--color-white) Solid;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+
+}
+
+.validated:checked~span {
+    background-color: var(--color-pink);
 }

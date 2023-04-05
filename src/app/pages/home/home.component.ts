@@ -8,25 +8,31 @@ import { TasksService } from 'src/app/services/tasks.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+ AllTask:ITask[]=[];
   // je cree une variable de taskList qui contient toutes mes taches
   taskList : ITask[]=[];
   taskUrgent:ITask[]=[];
   taskNoUrgent:ITask[]=[];
   constructor(private taskservice:TasksService){}
+
   ngOnInit(){
-this.getAllTask();
+    
+// this.getAllTask();
 // this.getUrgentTask();
 // this.getUrgentTask2(false);
 this.taskUrgent=this.getUrgentTask();
 this.taskNoUrgent=this.getNoUrgentTask();
   }
- getAllTask(){
-const AllTask=this.taskservice.getTaskBasket();
-return AllTask;
- }
+
+//  getAllTask(){
+// const AllTask=this.taskservice.getTaskBasket();
+// return AllTask;
+//  }
+
 getUrgentTask(){
-  const AllTask=this.taskservice.getTaskBasket();
-let UrgentTask=AllTask.filter((UTask:ITask)=>UTask.isUrgent==true);
+  // const AllTask=this.taskservice.getTaskBasket();
+  this.AllTask=this.taskservice.getTaskBasket();
+let UrgentTask=this.AllTask.filter((UTask:ITask)=>UTask.isUrgent==true);
 console.log("les taches urgentes",UrgentTask);
 console.log("le tableau des taches",this.taskList);
 return UrgentTask;

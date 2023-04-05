@@ -1,13 +1,45 @@
-.category {
+/* *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+} */
+
+form {
+    height: 390px;
+    max-width: 390px;
     display: flex;
-    gap: 30px;
-    margin: 30px;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* align-items: center; */
+}
+
+.category {
+    /* width:390px; */
+    /* margin:auto; */
+    margin-top: 46px;
+    display: flex;
+    gap: 7px;
+    /* justify-content: space-around; */
+    /* gap:10px;   */
 
 }
 
+/* .category div{
+    padding:5px;
+    margin-left:16
+} */
+
 .title-category {
-    padding-top: 30px;
-    margin-left: 26px;
+    padding-top: 20px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.task {
+    margin-top: 46px;
+    font-size: 16px;
+    margin-left: 10px;
 }
 
 /* .container{
@@ -18,29 +50,28 @@
     width:100%;
     margin:auto;
 } */
-.container-textarea {
+/* .container-textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 .checkbox {
     width: 100%;
     margin: auto;
     display: flex;
     padding-top: 5px;
-    margin-left: 30px
-        /* justify-content: center; */
+    margin-left: 30px;
 }
 
-p {
+/* p {
     margin-left: 26px;
-}
+} */
 
-img {
+/* img {
     width: 100%;
     object-fit: fill;
-}
+} */
 
 input[type="radio"].input-radio {
     display: none;
@@ -59,28 +90,19 @@ input[type="radio"].input-radio:checked+label {
     background-color: var(--color-yellow);
 }
 
-main {
-    height: 70vh;
-    max-height: 80vh;
 
-}
 
 .textarea {
-    margin: 20px;
+    margin: 30px;
     width: 338px;
-    height: 182px;
+    height: 282px;
     background-color: var(--color-gray-black);
     color: var(--color-white);
-    border: none;
 }
 
 input[type="checkbox"] {
     opacity: 0;
 
-}
-
-.checkbox {
-    position: relative;
 }
 
 .checkbox label {
@@ -95,27 +117,33 @@ input[type="checkbox"] {
     height: 20px;
     width: 20px;
     display: inline-block;
-  
+
 }
 
 .isurgent:checked~span {
-    background-color: var( --color-pink);
+    background-color: var(--color-pink);
 }
 
 button {
+    position: absolute;
+    left: 72px;
+    top: 522px;
+
+
+/* background: #64A7D9; */
+
     width: 248px;
     border-radius: 30px;
     height: 48px;
-    background-color: var(--color-gray-black);
+    background-color: var(--color-blue);
     border: none;
-color:white;
+    color: white;
     cursor: pointer;
 
 }
-.option{
-    color:white;
-}
 
-.button-valid:disabled{
-opacity: 0.5;
+
+.button-valid:disabled {
+    opacity: 0.5;
+    background-color: var(--color-blue);
 }
