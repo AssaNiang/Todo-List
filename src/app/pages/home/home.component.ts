@@ -10,7 +10,7 @@ import { TasksService } from 'src/app/services/tasks.service';
 export class HomeComponent {
  AllTask:ITask[]=[];
   // je cree une variable de taskList qui contient toutes mes taches
-  taskList : ITask[]=[];
+ 
   taskUrgent:ITask[]=[];
   taskNoUrgent:ITask[]=[];
   constructor(private taskservice:TasksService){}
@@ -34,13 +34,20 @@ getUrgentTask(){
   this.AllTask=this.taskservice.getTaskBasket();
 let UrgentTask=this.AllTask.filter((UTask:ITask)=>UTask.isUrgent==true);
 console.log("les taches urgentes",UrgentTask);
-console.log("le tableau des taches",this.taskList);
+console.log("le tableau des taches",this.AllTask);
 return UrgentTask;
  
 }
+// getNoUrgentTask(){
+//   const AllTask=this.taskservice.getTaskBasket();
+// let UrgentTask1=AllTask.filter((UTask:ITask)=>UTask.isUrgent===false);
+// console.log("les taches non urgentes",UrgentTask1);
+// return UrgentTask1;
+ 
+// }
 getNoUrgentTask(){
-  const AllTask=this.taskservice.getTaskBasket();
-let UrgentTask1=AllTask.filter((UTask:ITask)=>UTask.isUrgent===false);
+  this.AllTask=this.taskservice.getTaskBasket();
+let UrgentTask1=  this.AllTask.filter((UTask:ITask)=>UTask.isUrgent===false);
 console.log("les taches non urgentes",UrgentTask1);
 return UrgentTask1;
  
